@@ -1,0 +1,8 @@
+project:
+  name: "crashsnap"
+  owners: []
+
+workflow:
+  default_branch: "main"
+  test_command: "go test ./..."
+  build_command: "go build ./cmd/crashsnap"
