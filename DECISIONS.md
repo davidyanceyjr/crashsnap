@@ -89,3 +89,12 @@
 - Decision: Use a standard Go module rooted at `crashsnap`, place the executable entrypoint in `cmd/crashsnap`, and keep CLI orchestration in `internal/cli` until later slices justify broader package structure.
 - Consequences: Early implementation stays close to Go conventions, `go build ./cmd/crashsnap` and `go test ./...` become the baseline workflow, and later domain packages can be added without moving the executable entrypoint.
 - Source: `SESSION.md`, `SKILLS/core-implementation.md`, slice `001-repo-bootstrap`
+
+## D-011: Draft snapshot layout boundary
+
+- Date: 2026-05-06
+- Status: Accepted
+- Context: Slice `002a-snapshot-layout` needed a concrete internal directory shape for snapshots without prematurely committing to manifest fields or a public compatibility contract.
+- Decision: The draft snapshot layout consists of a root directory containing `metadata/`, `raw/`, `normalized/`, `reports/`, and `artifacts/`. This boundary is internal-only draft contract and does not yet imply manifest file names or public schema promises.
+- Consequences: Later slices can build manifest semantics and collectors against a stable internal directory shape while `HG-002` remains unapproved for public machine-readable compatibility claims.
+- Source: `ROADMAP.md`, `SESSION.md`, `README.md`
