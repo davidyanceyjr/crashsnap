@@ -2,30 +2,30 @@
 
 ## Current session
 
-ID: `006-002a-snapshot-layout`
+ID: `007-002b-manifest-core-fields`
 
 Status: ready-with-gate-constraint
 
 ## Slice
 
-`002a-snapshot-layout`
+`002b-manifest-core-fields`
 
 ## Objective
 
-Define the initial internal snapshot directory layout for draft snapshots, while keeping the contract explicitly internal until `HG-002` is approved for public compatibility claims.
+Define the initial draft manifest base model for snapshot identity, schema references, timestamps, and provenance fields, while keeping the contract explicitly internal until `HG-002` is approved for public compatibility claims.
 
 ## Scope
 
 Implement:
 
-- define the initial snapshot directory layout
-- add draft fixtures for valid snapshot directory structure
-- add tests for path construction and invalid snapshot roots
-- document the layout as internal-only draft contract
+- define the initial draft manifest base model
+- add serialization helpers and base-manifest fixtures
+- add tests for required fields and round-trip serialization
+- document the manifest boundary as internal-only draft contract
 
 ## Out of scope
 
-- manifest field design
+- collector status modeling
 - live capture implementation
 - report rendering
 - redaction
@@ -35,7 +35,7 @@ Implement:
 ## Source priority for this slice
 
 1. `SESSION.md`
-2. `ROADMAP.md` slice `002a-snapshot-layout`
+2. `ROADMAP.md` slice `002b-manifest-core-fields`
 3. `docs/IMPLEMENTATION_PLAN.md`
 4. `docs/IMPLEMENTATION_HANDOFF.md`
 5. `README.md`
@@ -51,15 +51,15 @@ Implement:
 
 ## Acceptance criteria
 
-- an internal snapshot layout is defined in code and fixtures
-- path-construction and invalid-root tests cover the happy path and a relevant failure path
+- a draft manifest base model is defined in code and fixtures
+- required-field and round-trip serialization tests cover the happy path and a relevant failure path
 - the work stays explicitly internal-draft and does not claim stable external compatibility
-- any durable layout-boundary decision is recorded in `DECISIONS.md`
+- any durable manifest-boundary decision is recorded in `DECISIONS.md`
 
 ## Validation plan
 
 - run `go test ./...`
-- run targeted layout-focused tests if added separately
+- run targeted manifest-focused tests if added separately
 - verify any draft schema or fixture artifacts remain clearly non-stable
 
 ## Canonical product document
@@ -76,8 +76,8 @@ None currently recorded.
 
 ## Current repo state
 
-Slice `001-repo-bootstrap` is complete. The repository now contains a Go module, a thin CLI scaffold, baseline tests, project-specific build and test commands, and a local Git repository on `main`.
+Slices `001-repo-bootstrap` and `002a-snapshot-layout` are complete. The repository now contains a Go module, a thin CLI scaffold, draft snapshot layout code and fixtures, baseline tests, project-specific build and test commands, and a local Git repository.
 
 ## Next action required
 
-Implement slice `002a-snapshot-layout` as an internal draft contract, or obtain `HG-002` approval before making any public compatibility claims.
+Implement slice `002b-manifest-core-fields` as an internal draft contract, or obtain `HG-002` approval before making any public compatibility claims.
