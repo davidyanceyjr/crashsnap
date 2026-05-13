@@ -19,36 +19,11 @@ coverage.txt
 *.db-shm
 *.db-wal
 
-# crashsnap local/generated
+# Local generated/cache data
 /.tmp/
 /.local/
 /.cache/
 /tmp/
 *.tmp
 *.note
-ACCEPTANCE_CRITERIA.md
-DECISIONS.md
-FIRST_RUN.md
-NON_GOALS.md
-REQUIREMENTS.md
-RISKS.md
-ROADMAP.md
-SESSION.md
-SESSION_PROMPT.md
-SESSIONS/
-USER_FLOWS.md
-VISION.md
-AGENTS.md
-AGENTS.md.disabled
-spec-crashsnap.tar.gz
-docs/HUMAN_GATES.md
-docs/IMPLEMENTATION_HANDOFF.md
-docs/IMPLEMENTATION_OPERATING_MODEL.md
-docs/IMPLEMENTATION_PLAN.md
-docs/OPEN_QUESTIONS.md
-SKILLS/
-SKILLS.disabled/
-
-# AI workflow metadata
-.codex/
-.skills/
+*.tar.gz
