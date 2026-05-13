@@ -1,3 +1,47 @@
-.tmp/
-crashsnap
-.github/workflows/
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Go/build
+/build/
+/dist/
+/crashsnap
+*.test
+*.out
+coverage.txt
+
+# Local runtime data
+.history.db
+*.db
+*.db-shm
+*.db-wal
+
+# crashsnap local/generated
+/.tmp/
+/.local/
+/.cache/
+/tmp/
+*.tmp
+*.note
+DECISIONS.md
+RISKS.md
+ROADMAP.md
+SESSION.md
+SESSION_PROMPT.md
+SESSIONS/
+AGENTS.md
+AGENTS.md.disabled
+docs/HUMAN_GATES.md
+docs/IMPLEMENTATION_HANDOFF.md
+docs/IMPLEMENTATION_OPERATING_MODEL.md
+docs/IMPLEMENTATION_PLAN.md
+docs/OPEN_QUESTIONS.md
+SKILLS/
+SKILLS.disabled/
+
+# AI workflow metadata
+.codex/
+.skills/
